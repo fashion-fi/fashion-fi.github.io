@@ -10,8 +10,8 @@ function staticLoadPlaces() {
     return [{
         name: "Pokèmon",
         location: {
-            lat: 37.4258345,
-            lng: -122.0720499,
+            lat: 37.4258345, // should be set according to user's proximate position
+            lng: -122.0720499, // should be set according to user's proximate position
         },
     }, ];
 }
