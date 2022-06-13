@@ -1,23 +1,29 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>GeoAR.js demo</title>
-    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script>
-        THREEx.ArToolkitContext.baseURL =
-            "https://raw.githack.com/jeromeetienne/ar.js/master/three.js/";
-    </script>
-    <script src="./script.js"></script>
+    <title>Fashion-Fi Demo</title>
 </head>
 
-<body style="margin: 0; overflow: hidden">
-    <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;">
-        <a-camera gps-camera="minDistance: 40;" rotation-reader></a-camera>
-    </a-scene>
+<body>
+    <h1>Fashion-Fi Demos</h1>
+    <a class="Demo: place nft" href="place_nft/">Basic Demo</a>
+    <p>Click + Drag entities on the screen. Note the plane cannot be dragged (it does not have the "click-drag" attribute).</p>
+    <p>Try the WASD keys to move around while dragging an entity!</p>
+
+    <hr />
+
+    <a class="Demo: place nfts" href="place_nft/">Events Demo</a>
+    <p>Nft holders connnect their wallets, show their nfts, and place their nft exhibition show in certain place</p>
+
+    <hr />
+
+    <a class="Demo: visit nfts exhibition" href="visit_nft/">Children Demo</a>
+    <p>Fashion-fi retrieve the nft show room and interact with the nft curations</p>
+
+    <hr />
+    <a class="Demo: try on nfts" href="try_on_nft/">Physics Demo</a>
+    <p>With the advanced ML technology, anyone can try on their in the forms of T-shirt, phone cases, accessories</p>
+    <hr />
 </body>
 
 </html>

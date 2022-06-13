@@ -1,0 +1,27 @@
+{
+    "owner": {
+        "walletAddress": "62a653c73c4ab2325ca35205",
+        "showIntro": "My show",
+        "lat": 37.425843881922894,
+        "lng": -122.07174624856253
+    },
+    "models": [{
+            "name": "../assets/magnemite/scene.gltf",
+            "intro": "intro of nft_1",
+            "scale": "0.5 0.5 0.5",
+            "rotatio": "0 180 0"
+        },
+        {
+            "name": "../assets/articuno/scene.gltf",
+            "intro": "intro of nft_2",
+            "scale": "0.2 0.2 0.2",
+            "rotatio": "0 180 0"
+        },
+        {
+            "name": "../assets/dragonite/scene.gltf",
+            "intro": "intro of nft_3",
+            "scale": "0.08 0.08 0.08",
+            "rotatio": "0 180 0"
+        }
+    ]
+}
