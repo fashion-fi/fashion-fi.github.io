@@ -6,6 +6,8 @@ Moralis.start({ serverUrl, appId });
 let user = Moralis.User.current();
 
 async function start() {
+    document.querySelector("#app").style.display = "block";
+    document.querySelector("#login_button").onclick = login;
     login();
 }
 
@@ -24,7 +26,7 @@ async function login() {
 }
 
 function initApp() {
-    console.log("App init...");
+    document.querySelector("#submit_button").onclick = submitNft;
 }
 
 async function submitNft() {}
