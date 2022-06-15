@@ -12,7 +12,8 @@ window.onload = () => {
             curr_lon = position.coords.longitude;
             nft_lat = nft_coords[0];
             nft_lon = nft_coords[1];
-            /* Invalid without Google API Key
+            /*
+            Invalid without Google API Key
                   var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(
                       new google.maps.LatLng({
                           lat: curr_lat,
@@ -23,11 +24,11 @@ window.onload = () => {
                           lng: nft_lon
                       })
                   );
-                  */
+            */
             var distanceInMeters =
                 distance(curr_lat, curr_lon, nft_lat, nft_lon, "k") * 1000;
             console.log('nft coord: ', { nft_lat, nft_lon }, 'current position coord: ', position.coords, 'distance: ', distanceInMeters);
-            distanceInMeters = 20
+            // distanceInMeters = 20;
             if (distanceInMeters > 40) {
                 // render nft curations
                 console.log('rendering nft coordinates, current distance: ', distanceInMeters);

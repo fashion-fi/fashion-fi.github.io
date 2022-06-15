@@ -1,26 +1,21 @@
-<!DOCTYPE html>
 <html>
+  <head>
+    <title>A-Frame Click & Drag Component - Basic</title>
+    <script src="../build.js"></script>
+  </head>
+  <body>
+    <a-scene>
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>GeoAR.js demo</title>
-    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script>
-        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
-    </script>
-    <script src="./script.js"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-</head>
+      <a-sphere click-drag position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-box click-drag position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
+      <a-cylinder click-drag position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
 
-<body style='margin: 0; overflow: hidden;'>
-    <div class="centered instructions"></div>
-    <a-scene vr-mode-ui='enabled: false' embedded arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-camera gps-camera rotation-reader></a-camera>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <a-entity position="0 0 3.8">
+        <a-camera look-controls-enabled="false" keyboard-controls="fpsMode: true"></a-camera>
+      </a-entity>
     </a-scene>
-    <div class="centered">
-        <button data-action="change"></button>
-    </div>
-</body>
+  </body>
+</html>

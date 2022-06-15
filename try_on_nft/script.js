@@ -164,6 +164,7 @@ function renderLocations(place) {
     const latitude = place[0];
     const longitude = place[1];
 
+
     // add place name
     const scene = document.querySelector('a-scene');
     const placeText = document.createElement("a-link");
