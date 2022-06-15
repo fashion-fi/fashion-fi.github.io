@@ -29,6 +29,8 @@ function initApp() {
     document.querySelector("#submit_button").onclick = submitNft;
 }
 
-async function submitNft() {}
+async function submitNft() {
+    location.replace("../place_nft/index.html");
+}
 
 start();
