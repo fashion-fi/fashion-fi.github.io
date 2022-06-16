@@ -1,3 +1,17 @@
+const myTimeout = setTimeout(myGreeting, 2000000);
+
+function myGreeting() {
+    clearTimeout(myTimeout);
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function someFunction() {
+    await delay(5000);
+}
+
 // getting places from APIs
 async function loadPlaces(position) {
     const params = {
@@ -29,15 +43,17 @@ async function loadPlaces(position) {
 
     const endpoint_v3 = `https://api.foursquare.com/v3/places/search?&ll=${position.latitude},${position.longitude}`;
     console.log(endpoint_v3);
+    /*
     let response = await fetch(endpoint_v3, options)
         .then(response => response.json())
         .catch(err => console.error(err));;
-    // let res = await fetch(endpoint);
+    */
+    let response = await fetch(endpoint);
     console.log(response.results);
     return response.results; // res.json();
 }
 
-async function loadPlacesFromJson(position) {
+function loadPlacesFromJson(position) {
     return fetch("./tmp.json").then((res) => {
         return res.json().then((resp) => {
             return resp.response.venues;
@@ -52,7 +68,7 @@ window.onload = () => {
     return navigator.geolocation.getCurrentPosition(
         async function(position) {
             // than use it to load from remote APIs some places nearby
-            loadPlaces(position.coords).then((places) => {
+            loadPlacesFromJson(position.coords).then((places) => {
                 console.log(places);
                 places.forEach((place) => {
                     console.log(place);
@@ -76,6 +92,9 @@ window.onload = () => {
                     console.log("succesfully place ", place);
                 });
             });
+            myGreeting();
+            await delay(5000);
+            location.replace("../place_nft/index.html");
         },
         (err) => console.error("Error in retrieving position", err), {
             enableHighAccuracy: true,
