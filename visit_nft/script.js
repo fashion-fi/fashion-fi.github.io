@@ -28,8 +28,8 @@ window.onload = () => {
             var distanceInMeters =
                 distance(curr_lat, curr_lon, nft_lat, nft_lon, "k") * 1000;
             console.log('nft coord: ', { nft_lat, nft_lon }, 'current position coord: ', position.coords, 'distance: ', distanceInMeters);
-            // distanceInMeters = 20;
-            if (distanceInMeters > 100) {
+            distanceInMeters = 20;
+            if (distanceInMeters > 40) {
                 // render nft curations
                 console.log('rendering nft coordinates, current distance: ', distanceInMeters);
                 renderLocations(nft_coords);
@@ -38,7 +38,7 @@ window.onload = () => {
                 // render geolocation
                 console.log('rendering nft market, current distance: ', distanceInMeters);
                 location.replace("../place_nft/index.html");
-                renderNfts(nft_coords);
+                // renderNfts(nft_coords);
             }
         },
         (err) => console.error("Error in retrieving position", err), {

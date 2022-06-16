@@ -26,11 +26,16 @@ async function login() {
 }
 
 function initApp() {
-    document.querySelector("#submit_button").onclick = submitNft;
+    document.querySelector("#submit_button").onclick = placeNft;
+    document.querySelector("#register_button").onclick = visitNft;
 }
 
-async function submitNft() {
+async function placeNft() {
     location.replace("../place_nft/index.html");
+}
+
+async function visitNft() {
+    location.replace("../visit_nft/index.html");
 }
 
 start();
